@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{36966119-7497-4DAA-AE40-330EAF427EBA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL Scripts", "SQL Scripts", "{FAF02B59-E383-4DCA-8747-6793BA1C24BB}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\OneDrive\Документы\SQL Server Management Studio\SurveysApp\Create tables.sql = ..\..\..\OneDrive\Документы\SQL Server Management Studio\SurveysApp\Create tables.sql
+		..\..\..\OneDrive\Документы\SQL Server Management Studio\SurveysApp\Drop tables.sql = ..\..\..\OneDrive\Документы\SQL Server Management Studio\SurveysApp\Drop tables.sql
+		..\..\..\OneDrive\Документы\SQL Server Management Studio\SurveysApp\Test values.sql = ..\..\..\OneDrive\Документы\SQL Server Management Studio\SurveysApp\Test values.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{D11A51B9-4ACF-43CD-A806-51BEED9B96F1}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FAF02B59-E383-4DCA-8747-6793BA1C24BB} = {36966119-7497-4DAA-AE40-330EAF427EBA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {054B7CFA-8B16-460C-B9F6-EFAE5136EF7F}
+	EndGlobalSection
+EndGlobal
