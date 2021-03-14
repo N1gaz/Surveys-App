@@ -1,5 +1,4 @@
-﻿using Application.Interfaces;
-using Application.Interfaces.ApplicationDatabaseContext;
+﻿using Application.Interfaces.ApplicationDatabaseContext;
 using DomainModel.Entities;
 using MediatR;
 using System.Threading;
