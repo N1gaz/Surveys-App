@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -7,7 +8,10 @@ namespace DomainModel.Entities
 {
     public partial class Result
     {
+        [Required]
         public int AnswerId { get; set; }
+
+        [Required]
         public int InterviewId { get; set; }
 
         public virtual Answer Answer { get; set; }

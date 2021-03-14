@@ -24,11 +24,9 @@ namespace Application.Features.Comands
             {
                 var answer = new Answer { QuestionId = request.QuestionId, AnswerText = request.AnswerText };
                 _context.Answers.Add(answer);
-
+                await _context.SaveChangesAsync();
                 return _context.GetNextQuestionId(request.QuestionId);
             }
         }
-
-
     }
 }

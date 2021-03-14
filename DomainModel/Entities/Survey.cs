@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -13,7 +14,10 @@ namespace DomainModel.Entities
             Questions = new HashSet<Question>();
         }
 
+        [Required]
         public int Id { get; set; }
+
+        [Required]
         public string SurveyName { get; set; }
         public DateTime? PublishDateTime { get; set; }
         public string SurveyDescription { get; set; }
