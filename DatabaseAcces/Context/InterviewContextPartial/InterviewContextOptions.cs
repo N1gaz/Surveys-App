@@ -9,6 +9,8 @@ namespace DatabaseAcces.Context.InterviewContextPartial
         {
             modelBuilder.HasAnnotation("Relational:Collation", "Cyrillic_General_CI_AS");
 
+            modelBuilder.HasDbFunction(() => GetNextQuestionId(default));
+
             modelBuilder.Entity<Answer>(entity =>
             {
                 entity.HasIndex(e => e.QuestionId, "QuestionId");
