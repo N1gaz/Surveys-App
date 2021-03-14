@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-#nullable disable
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace DomainModel.Entities
 {

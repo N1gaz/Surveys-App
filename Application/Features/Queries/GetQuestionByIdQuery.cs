@@ -1,4 +1,5 @@
 ﻿using Application.Interfaces;
+using Application.Interfaces.ApplicationDatabaseContext;
 using DomainModel.Entities;
 using MediatR;
 using System.Threading;
@@ -12,9 +13,9 @@ namespace Application.Features.Queries
 
         public class GetQuestionByIdQueryHandler : IRequestHandler<GetQuestionByIdQuery, Question>
         {
-            private readonly IDbContext _context;
+            private readonly IInterviewContext _context;
 
-            public GetQuestionByIdQueryHandler(IDbContext context)
+            public GetQuestionByIdQueryHandler(IInterviewContext context)
             {
                 _context = context;
             }
