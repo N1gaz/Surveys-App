@@ -23,9 +23,13 @@ namespace Application.Features.Comands
 
             public async Task<int> Handle(CreateResultCommand request, CancellationToken cancellationToken)
             {
+
+
                 var result = new Result { AnswerId = request.AnswerId, InterviewId = request.InterviewId };
+
                 _context.Results.Add(result);
                 await _context.SaveChangesAsync();
+
                 return GetNextQuestionId(_context.Answers.Find(result.AnswerId).QuestionId);
             }
 

@@ -2,6 +2,7 @@
 using DomainModel.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -24,6 +25,12 @@ namespace Application.Features.Queries
             public async Task<Question> Handle(GetQuestionByIdQuery request, CancellationToken cancellationToken)
             {
                 var result = await _context.Questions.FindAsync(request.Id);
+
+                if(result == null)
+                {
+                    throw new ArgumentException("Невеный номер вопроса");
+                }
+
                 result.Answers = await _context.Answers.Where(a => a.QuestionId == result.Id).ToListAsync();
                 return result;
             }
