@@ -18,11 +18,6 @@ namespace DatabaseAcces.Context.InterviewContextPartial
         public DbSet<Interview> Interviews { get; set; }
         public DbSet<Result> Results { get; set; }
 
-        public int GetNextQuestionId(int questionId)
-        {
-            throw new System.NotSupportedException();
-        }
-
         public async Task<int> SaveChangesAsync()
         {
             return await base.SaveChangesAsync();

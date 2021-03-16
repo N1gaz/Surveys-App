@@ -9,8 +9,6 @@ namespace DatabaseAcces.Context.InterviewContextPartial
         {
             modelBuilder.HasAnnotation("Relational:Collation", "Cyrillic_General_CI_AS");
 
-            modelBuilder.HasDbFunction(() => GetNextQuestionId(default));
-
             modelBuilder.Entity<Answer>(entity =>
             {
                 entity.HasIndex(e => e.QuestionId, "QuestionId");
@@ -67,11 +65,7 @@ namespace DatabaseAcces.Context.InterviewContextPartial
 
             modelBuilder.Entity<Result>(entity =>
             {
-                entity.HasNoKey();
-
-                entity.HasIndex(e => e.AnswerId, "AnswerId");
-
-                entity.HasIndex(e => e.InterviewId, "InterviewId");
+                entity.HasKey(f => new { f.AnswerId, f.InterviewId });
 
                 entity.HasOne(d => d.Answer)
                     .WithMany()

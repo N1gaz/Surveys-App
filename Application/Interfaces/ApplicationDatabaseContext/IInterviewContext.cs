@@ -12,7 +12,6 @@ namespace Application.Interfaces.ApplicationDatabaseContext
         DbSet<Interview> Interviews { get; set; }
         DbSet<Result> Results { get; set; }
         Task<int> SaveChangesAsync();
-        int GetNextQuestionId(int questionId);
 
     }
 }
