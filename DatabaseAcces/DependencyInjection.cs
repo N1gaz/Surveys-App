@@ -6,8 +6,16 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace DatabaseAcces
 {
+    /// <summary>
+    /// Utility class contains IoC method
+    /// </summary>
     public static class DependencyInjection
     {
+        /// <summary>
+        /// This method adds MS SQL SERVER to IoC contaner
+        /// </summary>
+        /// <param name="services">contaner</param>
+        /// <param name="configuration">app configuration</param>
         public static void AddInterviewContext(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<InterviewContext>(options =>

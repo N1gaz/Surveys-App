@@ -5,13 +5,15 @@ using System.Threading.Tasks;
 
 namespace DatabaseAcces.Context.InterviewContextPartial
 {
+    /// <summary>
+    /// MS SQL Database context
+    /// </summary>
     public partial class InterviewContext : DbContext, IInterviewContext
     {
         public InterviewContext(DbContextOptions<InterviewContext> options)
             : base(options)
         {
         }
-
         public DbSet<Survey> Surveys { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Answer> Answers { get; set; }
