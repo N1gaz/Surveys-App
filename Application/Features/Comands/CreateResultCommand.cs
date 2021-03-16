@@ -7,20 +7,36 @@ using System.Linq;
 
 namespace Application.Features.Comands
 {
+    /// <summary>
+    /// Request to application what creates new Result record
+    /// </summary>
     public class CreateResultCommand : IRequest<int>
     {
+        /// <summary>
+        /// Argument in request body means answer 
+        /// </summary>
         public int AnswerId { get; set; }
+        /// <summary>
+        /// Argument in request body means interview 
+        /// </summary>
         public int InterviewId { get; set; }
-
-        public class CreateResultCommandHandler : IRequestHandler<CreateResultCommand, int>
+        private class CreateResultCommandHandler : IRequestHandler<CreateResultCommand, int>
         {
             private readonly IInterviewContext _context;
-
+            /// <summary>
+            /// .ctor
+            /// </summary>
+            /// <param name="context">Application context what implements IInterviewContext</param>
             public CreateResultCommandHandler(IInterviewContext context)
             {
                 _context = context;
             }
-
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="request"></param>
+            /// <param name="cancellationToken"></param>
+            /// <returns>Next question id</returns>
             public async Task<int> Handle(CreateResultCommand request, CancellationToken cancellationToken)
             {
 
