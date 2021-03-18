@@ -24,7 +24,8 @@ namespace DatabaseAcces
                     b => b.MigrationsAssembly(typeof(InterviewContext).Assembly.FullName)
             ));
 
-            services.AddScoped<IInterviewContext>(provider => provider.GetService<InterviewContext>());
+            services.AddScoped<IQuestionsAccessable>(provider => provider.GetService<InterviewContext>());
+            services.AddScoped<IResultCreator>(provider => provider.GetService<InterviewContext>());
         }
     }
 }

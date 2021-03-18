@@ -1,28 +1,21 @@
-﻿using Application.Interfaces.ApplicationDatabaseContext;
-using DomainModel.Entities;
+﻿using DomainModel.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 
 namespace DatabaseAcces.Context.InterviewContextPartial
 {
     /// <summary>
     /// MS SQL Database context
     /// </summary>
-    public partial class InterviewContext : DbContext, IInterviewContext
+    public partial class InterviewContext : DbContext
     {
         public InterviewContext(DbContextOptions<InterviewContext> options)
             : base(options)
         {
         }
-        public DbSet<Survey> Surveys { get; set; }
-        public DbSet<Question> Questions { get; set; }
-        public DbSet<Answer> Answers { get; set; }
-        public DbSet<Interview> Interviews { get; set; }
-        public DbSet<Result> Results { get; set; }
-
-        public async Task<int> SaveChangesAsync()
-        {
-            return await base.SaveChangesAsync();
-        }
+        private DbSet<Survey> Surveys { get; set; }
+        private DbSet<Question> Questions { get; set; }
+        private DbSet<Answer> Answers { get; set; }
+        private DbSet<Interview> Interviews { get; set; }
+        private DbSet<Result> Results { get; set; }
     }
 }
