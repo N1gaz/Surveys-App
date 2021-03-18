@@ -22,11 +22,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Insfrastructure", "Insfrastructure", "{79D04EB5-D316-4D2D-BC39-F4AF123794B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseAcces", "DatabaseAcces\DatabaseAcces.csproj", "{95A21C14-68BC-4050-9568-04C617DA1828}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseAcces", "DatabaseAcces\DatabaseAcces.csproj", "{95A21C14-68BC-4050-9568-04C617DA1828}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{3C39B6EB-94BC-400E-B275-673914680113}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveysWebApi", "WebApplication1\SurveysWebApi.csproj", "{3A27BBA0-E4F1-4609-90AD-CD47B8644969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SurveysWebApi", "WebApplication1\SurveysWebApi.csproj", "{3A27BBA0-E4F1-4609-90AD-CD47B8644969}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerSurveysApp", "DockerSurveysApp\DockerSurveysApp.csproj", "{F42A047D-71A0-43FB-B087-D7B5599D5AB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{3A27BBA0-E4F1-4609-90AD-CD47B8644969}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A27BBA0-E4F1-4609-90AD-CD47B8644969}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A27BBA0-E4F1-4609-90AD-CD47B8644969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F42A047D-71A0-43FB-B087-D7B5599D5AB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F42A047D-71A0-43FB-B087-D7B5599D5AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F42A047D-71A0-43FB-B087-D7B5599D5AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F42A047D-71A0-43FB-B087-D7B5599D5AB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{95A21C14-68BC-4050-9568-04C617DA1828} = {79D04EB5-D316-4D2D-BC39-F4AF123794B4}
 		{3C39B6EB-94BC-400E-B275-673914680113} = {D11A51B9-4ACF-43CD-A806-51BEED9B96F1}
 		{3A27BBA0-E4F1-4609-90AD-CD47B8644969} = {3C39B6EB-94BC-400E-B275-673914680113}
+		{F42A047D-71A0-43FB-B087-D7B5599D5AB2} = {3C39B6EB-94BC-400E-B275-673914680113}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {054B7CFA-8B16-460C-B9F6-EFAE5136EF7F}
